@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Para ti</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div id="home-petals"></div>
+
+            <section id="view-main" class="view active">
+                <div id="scene">
+                    <div id="letter-card">
+                        <p class="letter-greeting">Para ti</p>
+                        <p class="letter-body">
+                            Escribe aquí tu mensaje de felicitación. Puede ser
+                            tan largo o corto como quieras, este es el lugar
+                            para tus palabras. 💛Escribe aquí tu mensaje de
+                            felicitación. Puede ser tan largo o corto como
+                            quieras, este es el lugar para tus palabras.
+                            💛Escribe aquí tu mensaje de felicitación. Puede ser
+                        </p>
+                    </div>
+
+                    <div id="envelope">
+                        <div class="flap"></div>
+                        <div class="pocket"></div>
+                        <div class="bow">
+                            <div class="bow-loop left"></div>
+                            <div class="bow-loop right"></div>
+                            <div class="bow-knot"></div>
+                            <div class="bow-charm"></div>
+                        </div>
+                    </div>
+
+                    <a
+                        id="bouquet"
+                        href="flores.html"
+                        aria-label="Ramo de flores"
+                    >
+                        <img
+                            src="assets/boton-flores.png"
+                            alt="Ramo de flores"
+                        />
+                    </a>
+
+                    <div class="gifts-row">
+                        <a href="netflix.html" class="gift-icon">
+                            <span class="gift-bow"></span>
+                            <img
+                                class="gift-img"
+                                src="assets/netflix.png"
+                                alt=""
+                            />
+                        </a>
+                        <a href="favoritos.html" class="gift-icon">
+                            <span class="gift-bow"></span>
+                            <svg
+                                class="gift-svg"
+                                viewBox="0 0 24 24"
+                                fill="white"
+                            >
+                                <path
+                                    d="M12 21s-7-4.6-9.5-9.1C.8 8.6 2.4 5 6 5c2 0 3.4 1.1 4 2 .6-.9 2-2 4-2 3.6 0 5.2 3.6 3.5 6.9C19 16.4 12 21 12 21z"
+                                />
+                            </svg>
+                        </a>
+                        <button class="gift-icon" data-gift="3">
+                            <span class="gift-bow"></span>
+                            <img
+                                class="gift-img"
+                                src="assets/nana.jpg"
+                                alt=""
+                            />
+                        </button>
+                        <button class="gift-icon" data-gift="4">
+                            <span class="gift-bow"></span>
+                            <img
+                                class="gift-img"
+                                src="assets/spotify.png"
+                                alt=""
+                            />
+                        </button>
+                    </div>
+                </div>
+                <p id="tap-hint">Toca el sobre</p>
+            </section>
+
+            <section id="view-detail" class="view">
+                <div id="detail-card">
+                    <button id="btn-back">← Volver</button>
+                    <div id="detail-content"></div>
+                </div>
+            </section>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

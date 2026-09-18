@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: url('assets/fondo-flores.png') center/cover no-repeat fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gs-back {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    z-index: 100;
+    color: #7a3b52;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 6px 14px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+#gs-petals {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.gs-petal {
+    position: absolute;
+    top: -20px;
+    background: radial-gradient(circle at 35% 30%, #ffd3e2, #f78fb0);
+    border-radius: 60% 0 60% 0;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-5vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(105vh) rotate(360deg);
+    }
+}
+
+.gs-main {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.gs-note {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 27px,
+            rgba(230, 150, 175, 0.25) 27px 28px
+        ),
+        #fffdfa;
+    border-radius: 4px;
+    padding: 40px 26px 34px;
+    text-align: center;
+    box-shadow:
+        0 20px 40px rgba(190, 80, 120, 0.25),
+        0 0 0 6px #fff0f5,
+        0 0 0 8px #f3a8c4;
+    clip-path: polygon(
+        0% 1%,
+        5% 0%,
+        11% 1.3%,
+        18% 0%,
+        25% 1%,
+        32% 0%,
+        39% 1.2%,
+        46% 0%,
+        54% 1%,
+        61% 0%,
+        68% 1.2%,
+        75% 0%,
+        82% 1%,
+        89% 0%,
+        95% 1.3%,
+        100% 0%,
+        100% 100%,
+        95% 99%,
+        89% 100%,
+        82% 99%,
+        75% 100%,
+        68% 98.7%,
+        61% 100%,
+        54% 99%,
+        46% 100%,
+        39% 98.7%,
+        32% 100%,
+        25% 99%,
+        18% 100%,
+        11% 98.5%,
+        5% 100%,
+        0% 99%
+    );
+}
+
+.gs-note-title {
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    color: #c94f78;
+    margin-bottom: 16px;
+}
+
+.gs-note-body {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #6b3049;
+}
+
+.gs-sticker {
+    position: absolute;
+    font-size: 26px;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
+}
+
+.st1 {
+    top: -16px;
+    left: -12px;
+    transform: rotate(-15deg);
+}
+.st2 {
+    top: -14px;
+    right: -10px;
+    transform: rotate(12deg);
+}
+.st3 {
+    top: 40%;
+    left: -20px;
+    transform: rotate(-8deg);
+    font-size: 20px;
+}
+.st4 {
+    bottom: -14px;
+    right: -12px;
+    transform: rotate(-10deg);
+}
+.st5 {
+    bottom: -10px;
+    left: -14px;
+    transform: rotate(18deg);
+    font-size: 20px;
+}

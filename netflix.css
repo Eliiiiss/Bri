@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===== PANTALLA: QUIÉN ESTÁ VIENDO ===== */
+.nx-profiles {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #141414 url('assets/hero.jpg') center/cover no-repeat;
+    transition: opacity 0.4s ease;
+}
+
+.nx-profiles::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.nx-profiles.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nx-profiles-title {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 44px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.nx-profiles-list {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 46px;
+}
+
+.nx-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nx-profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 3px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.nx-profile:hover img {
+    border-color: #fff;
+}
+
+.nx-profile p {
+    margin-top: 12px;
+    color: #b3b3b3;
+    font-size: 15px;
+}
+
+.nx-profile:hover p {
+    color: #fff;
+}
+
+.nx-profile-plus {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #333;
+    color: #b3b3b3;
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nx-profile-add:hover .nx-profile-plus {
+    background: #454545;
+    color: #fff;
+}
+
+.nx-manage-btn {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    color: #808080;
+    border: 1px solid #808080;
+    padding: 10px 26px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.nx-manage-btn:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* ===== CATÁLOGO: oculto hasta elegir perfil ===== */
+.nx-catalog {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.nx-catalog.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ===== Botón volver ===== */
+.nx-back {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    z-index: 100;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 12px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+/* ===== Header ===== */
+.nx-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 18px 4%;
+    z-index: 10;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.nx-logo {
+    color: #e50914;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.nx-nav {
+    display: flex;
+    gap: 16px;
+}
+
+.nx-nav a {
+    color: #d2d2d2;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nx-nav a.active {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* ===== Hero ===== */
+.nx-hero {
+    position: relative;
+    width: 100%;
+    height: 62vh;
+    min-height: 380px;
+    background-size: cover;
+    background-position: center 20%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.nx-hero-fade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(0deg, #141414 5%, transparent 55%),
+        linear-gradient(90deg, rgba(20, 20, 20, 0.9) 0%, transparent 55%);
+}
+
+.nx-hero-info {
+    position: relative;
+    z-index: 2;
+    padding: 0 4% 36px;
+    max-width: 480px;
+}
+
+.nx-hero-title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.nx-hero-desc {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #eee;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.nx-hero-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nx-btn-play,
+.nx-btn-info {
+    border: none;
+    padding: 9px 18px;
+    border-radius: 4px;
+    font-size: 13.5px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nx-btn-play {
+    background: #fff;
+    color: #000;
+}
+
+.nx-btn-info {
+    background: rgba(109, 109, 110, 0.6);
+    color: #fff;
+}
+
+/* ===== Filas ===== */
+.nx-rows {
+    padding: 10px 0 60px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 3;
+}
+
+.nx-row {
+    margin-bottom: 26px;
+}
+
+.nx-row-title {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0 4% 10px;
+}
+
+.nx-cards {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 4% 6px;
+    scrollbar-width: none;
+}
+
+.nx-cards::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===== Pósters con imagen ===== */
+.nx-poster {
+    position: relative;
+    flex: 0 0 auto;
+    width: 130px;
+    height: 190px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-color: #2a2a2a;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.nx-poster:active {
+    transform: scale(0.96);
+}
+
+.nx-poster-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 8px 8px;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), transparent);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.nx-poster:hover .nx-poster-title,
+.nx-poster:active .nx-poster-title {
+    opacity: 1;
+}
+
+/* ===== Modal (imagen/gif grande) ===== */
+.nx-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.nx-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.nx-modal-card {
+    position: relative;
+    width: 90%;
+    max-width: 380px;
+    max-height: 84vh;
+}
+
+.nx-modal-close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    z-index: 2;
+    background: #fff;
+    color: #000;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#nx-modal-media {
+    width: 100%;
+    max-height: 84vh;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+}

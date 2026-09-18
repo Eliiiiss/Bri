@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Para ti 🌸</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="flores.css" />
+    </head>
+    <body>
+        <a href="index.html" class="gs-back">← Volver</a>
+
+        <div id="gs-petals"></div>
+
+        <main class="gs-main">
+            <div class="gs-note">
+                <span class="gs-sticker st1">🌸</span>
+                <span class="gs-sticker st2">🪷</span>
+                <span class="gs-sticker st3">✨</span>
+                <span class="gs-sticker st4">🌷</span>
+                <span class="gs-sticker st5">💮</span>
+
+                <p class="gs-note-title">Un ramo de flores para ti</p>
+                <p class="gs-note-body">
+                    Escribe aquí el mensaje que acompaña al ramo. Puede ser tan
+                    dulce o divertido como quieras, este es un espacio solo para
+                    tus palabras. 🌸💕
+                </p>
+            </div>
+        </main>
+
+        <script>
+            const container = document.getElementById('gs-petals')
+            const total = 22
+
+            for (let i = 0; i < total; i++) {
+                const petal = document.createElement('span')
+                petal.className = 'gs-petal'
+                petal.style.left = Math.random() * 100 + 'vw'
+                petal.style.animationDuration = 7 + Math.random() * 6 + 's'
+                petal.style.animationDelay = Math.random() * 8 + 's'
+                petal.style.width = petal.style.height =
+                    8 + Math.random() * 10 + 'px'
+                petal.style.opacity = 0.6 + Math.random() * 0.4
+                container.appendChild(petal)
+            }
+        </script>
+    </body>
+</html>
