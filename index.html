@@ -13,15 +13,40 @@
             <section id="view-main" class="view active">
                 <div id="scene">
                     <div id="letter-card">
-                        <p class="letter-greeting">Para ti</p>
-                        <p class="letter-body">
-                            Escribe aquí tu mensaje de felicitación. Puede ser
-                            tan largo o corto como quieras, este es el lugar
-                            para tus palabras. 💛Escribe aquí tu mensaje de
-                            felicitación. Puede ser tan largo o corto como
-                            quieras, este es el lugar para tus palabras.
-                            💛Escribe aquí tu mensaje de felicitación. Puede ser
-                        </p>
+                        <div class="letter-page" data-page="1">
+                            <p class="letter-greeting">Para ti</p>
+                            <p class="letter-body">
+                                lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. lorem
+                            </p>
+                            <button
+                                class="page-next"
+                                aria-label="Siguiente página"
+                            >
+                                →
+                            </button>
+                        </div>
+
+                        <div class="letter-page" data-page="2">
+                            <p class="letter-body">
+                                lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.
+                            </p>
+                            <button
+                                class="page-next"
+                                aria-label="Siguiente página"
+                            >
+                                →
+                            </button>
+                        </div>
+
+                        <div class="letter-page" data-page="3">
+                            <p class="letter-body">
+                                lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.
+                            </p>
+                        </div>
                     </div>
 
                     <div id="envelope">
@@ -67,32 +92,25 @@
                                 />
                             </svg>
                         </a>
-                        <button class="gift-icon" data-gift="3">
+                        <a href="hachi.html" class="gift-icon">
                             <span class="gift-bow"></span>
                             <img
                                 class="gift-img"
                                 src="assets/nana.jpg"
                                 alt=""
                             />
-                        </button>
-                        <button class="gift-icon" data-gift="4">
+                        </a>
+                        <a href="spotify.html" class="gift-icon">
                             <span class="gift-bow"></span>
                             <img
                                 class="gift-img"
                                 src="assets/spotify.png"
                                 alt=""
                             />
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <p id="tap-hint">Toca el sobre</p>
-            </section>
-
-            <section id="view-detail" class="view">
-                <div id="detail-card">
-                    <button id="btn-back">← Volver</button>
-                    <div id="detail-content"></div>
-                </div>
             </section>
         </div>
 

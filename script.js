@@ -3,27 +3,15 @@ const tapHint = document.getElementById('tap-hint')
 const letterCard = document.getElementById('letter-card')
 const giftsRow = document.querySelector('.gifts-row')
 
-const viewMain = document.getElementById('view-main')
-const viewDetail = document.getElementById('view-detail')
-const detailContent = document.getElementById('detail-content')
-const btnBack = document.getElementById('btn-back')
-const giftButtons = document.querySelectorAll('button.gift-icon')
-
-const giftsData = {
-    3: {
-        html: `<h2>Regalo 3</h2><p>Aquí va el texto o contenido de tu tercer regalo.</p>`,
-    },
-    4: {
-        html: `<h2>Regalo 4</h2><p>Aquí va el contenido del cuarto regalo (la playlist estilo Spotify).</p>`,
-    },
-}
-
 if (envelope) {
     envelope.addEventListener('click', () => {
         if (envelope.classList.contains('open')) return
 
         envelope.classList.add('open')
-        if (tapHint) tapHint.style.opacity = '0'
+
+        if (tapHint) {
+            tapHint.classList.add('hide')
+        }
 
         setTimeout(() => {
             if (letterCard) letterCard.classList.add('show')
@@ -32,23 +20,6 @@ if (envelope) {
         setTimeout(() => {
             if (giftsRow) giftsRow.classList.add('fly')
         }, 1250)
-    })
-}
-
-giftButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        const id = btn.dataset.gift
-        if (!giftsData[id]) return
-        detailContent.innerHTML = giftsData[id].html
-        viewMain.classList.remove('active')
-        viewDetail.classList.add('active')
-    })
-})
-
-if (btnBack) {
-    btnBack.addEventListener('click', () => {
-        viewDetail.classList.remove('active')
-        viewMain.classList.add('active')
     })
 }
 
@@ -67,3 +38,23 @@ if (homePetalsContainer) {
         homePetalsContainer.appendChild(petal)
     }
 }
+
+// Sistema de páginas apiladas de la carta
+const letterPages = Array.from(document.querySelectorAll('.letter-page'))
+let pageOrder = letterPages
+
+function updateStack() {
+    pageOrder.forEach((page, i) => {
+        page.classList.remove('stack-pos-0', 'stack-pos-1', 'stack-pos-2')
+        page.classList.add('stack-pos-' + i)
+    })
+}
+
+document.querySelectorAll('.page-next').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        pageOrder.push(pageOrder.shift())
+        updateStack()
+    })
+})
+
+updateStack()

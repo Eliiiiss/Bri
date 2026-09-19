@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 60px;
+}
+
+.sp-back {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    z-index: 100;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 6px 14px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+/* ===== HERO (encabezado de la playlist) ===== */
+.sp-hero {
+    padding: 60px 24px 26px;
+    background: linear-gradient(180deg, #3a2a44 0%, #1c1420 60%, #121212 100%);
+    text-align: center;
+}
+
+.sp-cover {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #ff9dc4, #8a4fc9 55%, #4f6fc9);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sp-cover-note {
+    font-size: 56px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.sp-kicker {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #d2d2d2;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.sp-title {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.sp-meta {
+    font-size: 12.5px;
+    color: #b3b3b3;
+    margin-bottom: 22px;
+}
+
+.sp-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.sp-play-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: none;
+    background: #1db954;
+    color: #121212;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(29, 185, 84, 0.4);
+}
+
+.sp-heart,
+.sp-dots {
+    font-size: 20px;
+    color: #b3b3b3;
+    cursor: pointer;
+}
+
+/* ===== LISTA DE CANCIONES ===== */
+.sp-tracklist {
+    padding: 14px 16px 10px;
+}
+
+.sp-track {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 6px;
+    border-radius: 6px;
+}
+
+.sp-track:active {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.sp-track-num {
+    width: 18px;
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 13px;
+}
+
+.sp-track-art {
+    width: 42px;
+    height: 42px;
+    border-radius: 4px;
+    background: linear-gradient(145deg, #ff9dc4, #8a4fc9);
+    flex-shrink: 0;
+}
+
+.sp-track-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.sp-track-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sp-track-artist {
+    font-size: 12.5px;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sp-track-duration {
+    font-size: 12.5px;
+    color: #b3b3b3;
+}
+
+/* ===== CANCIÓN DESTACADA (reproductor real de Spotify) ===== */
+.sp-featured {
+    padding: 26px 16px 10px;
+}
+
+.sp-featured-label {
+    font-size: 13px;
+    color: #b3b3b3;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.sp-embed-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+}

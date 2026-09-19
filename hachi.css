@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url('assets/fondo.png') center/cover no-repeat fixed;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 20px 60px;
+}
+
+.hc-back {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    z-index: 100;
+    color: #7a3b52;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 6px 14px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.hc-header {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.hc-title {
+    font-family: 'Caveat', cursive;
+    font-size: 46px;
+    color: #c94f78;
+    line-height: 1;
+}
+
+.hc-subtitle {
+    font-size: 13px;
+    color: #7a3b52;
+    margin-top: 6px;
+    opacity: 0.85;
+}
+
+.hc-board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 16px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.hc-card {
+    background: #fffdf8;
+    border-radius: 6px;
+    padding: 10px 10px 14px;
+    box-shadow: 0 10px 22px rgba(150, 60, 100, 0.22);
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.hc-card:active {
+    transform: scale(0.97);
+}
+
+.hc-r1 {
+    transform: rotate(-3deg);
+}
+.hc-r2 {
+    transform: rotate(2.5deg);
+    margin-top: 18px;
+}
+.hc-r3 {
+    transform: rotate(3deg);
+}
+.hc-r4 {
+    transform: rotate(-2deg);
+    margin-top: 10px;
+}
+.hc-r5 {
+    transform: rotate(3.5deg);
+}
+.hc-r6 {
+    transform: rotate(-2.5deg);
+    margin-top: 14px;
+}
+.hc-r7 {
+    transform: rotate(2deg);
+}
+.hc-r8 {
+    transform: rotate(-3deg);
+    margin-top: 8px;
+}
+
+.hc-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-4deg);
+    width: 46px;
+    height: 18px;
+    background: rgba(233, 150, 180, 0.55);
+    border-radius: 2px;
+}
+
+.hc-photo img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+}
+
+.hc-caption {
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    color: #7a3b52;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.hc-note {
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 20px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hc-emoji {
+    font-size: 34px;
+    margin-bottom: 6px;
+}
+
+.hc-name {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #c94f78;
+    margin-bottom: 4px;
+}
+
+.hc-phrase {
+    font-size: 11.5px;
+    color: #6b3049;
+    line-height: 1.4;
+    padding: 0 6px;
+}
+
+@media (min-width: 480px) {
+    .hc-board {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 560px;
+    }
+}

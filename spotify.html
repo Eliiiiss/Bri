@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tu playlist</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="spotify.css" />
+    </head>
+    <body>
+        <a href="index.html" class="sp-back">← Volver</a>
+
+        <header class="sp-hero">
+            <div class="sp-cover">
+                <span class="sp-cover-note">♪</span>
+            </div>
+            <p class="sp-kicker">PLAYLIST</p>
+            <h1 class="sp-title">Para ti</h1>
+            <p class="sp-meta">Hecha por mí · con tus bandas favoritas</p>
+            <div class="sp-actions">
+                <button class="sp-play-btn" aria-label="Reproducir">▶</button>
+                <span class="sp-heart">♡</span>
+                <span class="sp-dots">•••</span>
+            </div>
+        </header>
+
+        <main class="sp-tracklist">
+            <div class="sp-track">
+                <span class="sp-track-num">1</span>
+                <div class="sp-track-art"></div>
+                <div class="sp-track-info">
+                    <p class="sp-track-title">Nombre de la canción</p>
+                    <p class="sp-track-artist">Nombre de la banda</p>
+                </div>
+                <span class="sp-track-duration">3:24</span>
+            </div>
+
+            <div class="sp-track">
+                <span class="sp-track-num">2</span>
+                <div class="sp-track-art"></div>
+                <div class="sp-track-info">
+                    <p class="sp-track-title">Nombre de la canción</p>
+                    <p class="sp-track-artist">Nombre de la banda</p>
+                </div>
+                <span class="sp-track-duration">2:58</span>
+            </div>
+
+            <div class="sp-track">
+                <span class="sp-track-num">3</span>
+                <div class="sp-track-art"></div>
+                <div class="sp-track-info">
+                    <p class="sp-track-title">Nombre de la canción</p>
+                    <p class="sp-track-artist">Nombre de la banda</p>
+                </div>
+                <span class="sp-track-duration">4:02</span>
+            </div>
+
+            <div class="sp-track">
+                <span class="sp-track-num">4</span>
+                <div class="sp-track-art"></div>
+                <div class="sp-track-info">
+                    <p class="sp-track-title">Nombre de la canción</p>
+                    <p class="sp-track-artist">Nombre de la banda</p>
+                </div>
+                <span class="sp-track-duration">3:11</span>
+            </div>
+
+            <div class="sp-track">
+                <span class="sp-track-num">5</span>
+                <div class="sp-track-art"></div>
+                <div class="sp-track-info">
+                    <p class="sp-track-title">Nombre de la canción</p>
+                    <p class="sp-track-artist">Nombre de la banda</p>
+                </div>
+                <span class="sp-track-duration">3:45</span>
+            </div>
+        </main>
+
+        <section class="sp-featured">
+            <p class="sp-featured-label">
+                La canción con la que más te identificas
+            </p>
+            <div class="sp-embed-wrap">
+                <iframe
+                    src="https://open.spotify.com/embed/track/TRACK_ID_AQUI?utm_source=generator&theme=0"
+                    width="100%"
+                    height="152"
+                    frameborder="0"
+                    allowfullscreen=""
+                    allow="
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        fullscreen;
+                        picture-in-picture;
+                    "
+                    loading="lazy"
+                >
+                </iframe>
+            </div>
+        </section>
+    </body>
+</html>
