@@ -282,9 +282,9 @@ body {
 /* ===== RAMO DE FLORES (imagen) ===== */
 #bouquet {
     position: absolute;
-    top: 290px;
-    right: -22px;
-    width: 90px;
+    top: 490px;
+    right: 100px;
+    width: 80px;
     display: block;
     cursor: pointer;
     z-index: 20;
