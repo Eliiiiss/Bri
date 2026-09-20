@@ -8,7 +8,6 @@ body {
     background: #121212;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    padding-bottom: 60px;
 }
 
 .sp-back {
@@ -25,115 +24,246 @@ body {
     backdrop-filter: blur(4px);
 }
 
-/* ===== HERO (encabezado de la playlist) ===== */
-.sp-hero {
-    padding: 60px 24px 26px;
-    background: linear-gradient(180deg, #3a2a44 0%, #1c1420 60%, #121212 100%);
-    text-align: center;
+.sp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 54px 16px 6px;
 }
 
-.sp-cover {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto 20px;
-    border-radius: 8px;
-    background: linear-gradient(145deg, #ff9dc4, #8a4fc9 55%, #4f6fc9);
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+.sp-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ff9dc4, #8a4fc9);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
 }
 
-.sp-cover-note {
-    font-size: 56px;
+.sp-header-icons {
+    display: flex;
+    gap: 18px;
+    font-size: 17px;
+}
+
+.sp-greeting {
+    font-size: 23px;
+    font-weight: 800;
+    padding: 10px 16px 14px;
+}
+
+.sp-chips {
+    display: flex;
+    gap: 8px;
+    padding: 0 16px 16px;
+    overflow-x: auto;
+}
+
+.sp-chip {
+    border: none;
+    background: #2a2a2a;
+    color: #d2d2d2;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.sp-chip.active {
+    background: #fff;
+    color: #121212;
+}
+
+.sp-quick-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 0 16px 28px;
+}
+
+.sp-quick-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 4px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sp-quick-cover {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.85);
 }
 
-.sp-kicker {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: #d2d2d2;
-    font-weight: 700;
-    margin-bottom: 6px;
+.sp-cover-1 {
+    background: linear-gradient(145deg, #ff9dc4, #8a4fc9 55%, #4f6fc9);
+}
+.sp-cover-2 {
+    background: linear-gradient(145deg, #6f8fd6, #3f4f8a 55%, #1c2440);
 }
 
-.sp-title {
-    font-size: 34px;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
-.sp-meta {
+.sp-quick-item span {
     font-size: 12.5px;
-    color: #b3b3b3;
-    margin-bottom: 22px;
+    font-weight: 600;
+    color: #fff;
 }
 
-.sp-actions {
+.sp-shelf {
+    padding: 0 0 28px;
+}
+
+.sp-shelf-title {
+    font-size: 17px;
+    font-weight: 800;
+    padding: 0 16px 14px;
+}
+
+.sp-shelf-row {
+    display: flex;
+    gap: 14px;
+    padding: 0 16px;
+    overflow-x: auto;
+}
+
+.sp-shelf-card {
+    flex: 0 0 auto;
+    width: 140px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sp-shelf-cover {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 22px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
 }
 
-.sp-play-btn {
-    width: 54px;
-    height: 54px;
+.sp-shelf-play {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    border: none;
     background: #1db954;
     color: #121212;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(29, 185, 84, 0.4);
-}
-
-.sp-heart,
-.sp-dots {
-    font-size: 20px;
-    color: #b3b3b3;
-    cursor: pointer;
-}
-
-/* ===== LISTA DE CANCIONES ===== */
-.sp-tracklist {
-    padding: 14px 16px 10px;
-}
-
-.sp-track {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px 6px;
-    border-radius: 6px;
-}
-
-.sp-track:active {
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.sp-track-num {
-    width: 18px;
-    text-align: center;
-    color: #b3b3b3;
+    justify-content: center;
     font-size: 13px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.sp-track-art {
-    width: 42px;
-    height: 42px;
+.sp-shelf-card p {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.sp-artists {
+    display: flex;
+    gap: 18px;
+    padding: 0 16px;
+    overflow-x: auto;
+}
+
+.sp-artist {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 78px;
+}
+
+.sp-artist-avatar {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.sp-artist-1 {
+    background: linear-gradient(145deg, #ff5c8a, #7a2fcf);
+}
+.sp-artist-2 {
+    background: linear-gradient(145deg, #ffb64f, #ff5c8a);
+}
+
+.sp-artist p {
+    font-size: 11.5px;
+    color: #d2d2d2;
+}
+
+.sp-bottom-spacer {
+    height: 130px;
+}
+
+.sp-miniplayer {
+    position: fixed;
+    bottom: 64px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #2a2a2a;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 150;
+}
+
+.sp-mini-cover {
+    width: 38px;
+    height: 38px;
     border-radius: 4px;
-    background: linear-gradient(145deg, #ff9dc4, #8a4fc9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
     flex-shrink: 0;
 }
 
-.sp-track-info {
+.sp-mini-info {
     flex: 1;
+    text-align: left;
     min-width: 0;
 }
 
-.sp-track-title {
-    font-size: 14px;
+.sp-mini-title {
+    font-size: 13px;
     font-weight: 600;
     color: #fff;
     white-space: nowrap;
@@ -141,32 +271,100 @@ body {
     text-overflow: ellipsis;
 }
 
-.sp-track-artist {
-    font-size: 12.5px;
-    color: #b3b3b3;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.sp-track-duration {
-    font-size: 12.5px;
+.sp-mini-sub {
+    font-size: 11px;
     color: #b3b3b3;
 }
 
-/* ===== CANCIÓN DESTACADA (reproductor real de Spotify) ===== */
-.sp-featured {
-    padding: 26px 16px 10px;
+.sp-mini-play {
+    font-size: 16px;
+    color: #fff;
+    padding: 0 6px;
 }
 
-.sp-featured-label {
-    font-size: 13px;
-    color: #b3b3b3;
-    margin-bottom: 12px;
+.sp-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background: #000;
+    border-top: 1px solid #222;
+    padding: 8px 0 12px;
+    z-index: 150;
+}
+
+.sp-nav-item {
+    flex: 1;
     text-align: center;
+    color: #888;
+    font-size: 10.5px;
+}
+
+.sp-nav-item span {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.sp-nav-item.active {
+    color: #fff;
+}
+
+.sp-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.sp-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sp-player-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #181818;
+    border-radius: 18px 18px 0 0;
+    padding: 12px 16px 34px;
+    z-index: 250;
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.3, 0.8, 0.4, 1);
+}
+
+.sp-player-sheet.open {
+    transform: translateY(0);
+}
+
+.sp-sheet-handle {
+    width: 40px;
+    height: 4px;
+    background: #555;
+    border-radius: 4px;
+    margin: 4px auto 16px;
+    cursor: pointer;
+}
+
+.sp-sheet-title {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 12px;
 }
 
 .sp-embed-wrap {
     border-radius: 12px;
     overflow: hidden;
+}
+
+.sp-embed-wrap iframe {
+    border-radius: 12px;
 }

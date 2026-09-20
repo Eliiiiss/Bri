@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tu playlist</title>
+        <title>Spotify</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="spotify.css" />
@@ -14,79 +14,204 @@
     <body>
         <a href="index.html" class="sp-back">← Volver</a>
 
-        <header class="sp-hero">
-            <div class="sp-cover">
-                <span class="sp-cover-note">♪</span>
-            </div>
-            <p class="sp-kicker">PLAYLIST</p>
-            <h1 class="sp-title">Para ti</h1>
-            <p class="sp-meta">Hecha por mí · con tus bandas favoritas</p>
-            <div class="sp-actions">
-                <button class="sp-play-btn" aria-label="Reproducir">▶</button>
-                <span class="sp-heart">♡</span>
-                <span class="sp-dots">•••</span>
+        <header class="sp-header">
+            <div class="sp-avatar">B</div>
+            <div class="sp-header-icons">
+                <span>🕘</span>
+                <span>🔔</span>
             </div>
         </header>
 
-        <main class="sp-tracklist">
-            <div class="sp-track">
-                <span class="sp-track-num">1</span>
-                <div class="sp-track-art"></div>
-                <div class="sp-track-info">
-                    <p class="sp-track-title">Nombre de la canción</p>
-                    <p class="sp-track-artist">Nombre de la banda</p>
+        <h1 class="sp-greeting">Buenas tardes</h1>
+
+        <div class="sp-chips">
+            <button class="sp-chip active">Todo</button>
+            <button class="sp-chip">Música</button>
+            <button class="sp-chip">Podcasts</button>
+        </div>
+
+        <div class="sp-quick-grid">
+            <button class="sp-quick-item" data-playlist="1">
+                <div class="sp-quick-cover sp-cover-1">♪</div>
+                <span>Tus artistas favoritos</span>
+            </button>
+            <button class="sp-quick-item" data-playlist="2">
+                <div class="sp-quick-cover sp-cover-2">♪</div>
+                <span>Me recuerdan a ti</span>
+            </button>
+        </div>
+
+        <section class="sp-shelf">
+            <p class="sp-shelf-title">Hecho para ti</p>
+            <div class="sp-shelf-row">
+                <button class="sp-shelf-card" data-playlist="1">
+                    <div class="sp-shelf-cover sp-cover-1">
+                        <span class="sp-shelf-play">▶</span>
+                    </div>
+                    <p>Tus artistas favoritos</p>
+                </button>
+                <button class="sp-shelf-card" data-playlist="2">
+                    <div class="sp-shelf-cover sp-cover-2">
+                        <span class="sp-shelf-play">▶</span>
+                    </div>
+                    <p>Me recuerdan a ti</p>
+                </button>
+            </div>
+        </section>
+
+        <section class="sp-shelf">
+            <p class="sp-shelf-title">Artistas que sigues</p>
+            <div class="sp-artists">
+                <div class="sp-artist">
+                    <div
+                        class="sp-artist-avatar sp-artist-1"
+                        data-artist-url="https://open.spotify.com/artist/2dIgFjalVxs4ThymZ67YCE?si=BAe1epQMQGuuUwHddTSamQ"
+                    >
+                        SK
+                    </div>
+                    <p>Stray Kids</p>
                 </div>
-                <span class="sp-track-duration">3:24</span>
+                <div class="sp-artist">
+                    <div
+                        class="sp-artist-avatar sp-artist-2"
+                        data-artist-url="https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0?si=_vy0rcecR0m0yj33S60Tdw"
+                    >
+                        TW
+                    </div>
+                    <p>TWICE</p>
+                </div>
+                <div class="sp-artist">
+                    <div
+                        class="sp-artist-avatar sp-artist-2"
+                        data-artist-url="https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH?si=anCWbg0xRayUEGR8-gUFQQ"
+                    >
+                        TW
+                    </div>
+                    <p>Arctic Monkeys</p>
+                </div>
+                <div class="sp-artist">
+                    <div
+                        class="sp-artist-avatar sp-artist-2"
+                        data-artist-url="https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh?si=oQq4wxOgSUuzB-Azwpy-bA"
+                    >
+                        TW
+                    </div>
+                    <p>Nirvana</p>
+                </div>
+                <div class="sp-artist">
+                    <div
+                        class="sp-artist-avatar sp-artist-2"
+                        data-artist-url="https://open.spotify.com/artist/5O4DsTkJ6z2eTSvIHZ6sDo?si=BnNYeELJTl-avHwfZ4pKIg"
+                    >
+                        TW
+                    </div>
+                    <p>Plastic Tree</p>
+                </div>
+                </div>
+                <div class="sp-artist">
+                    <div
+                        class="sp-artist-avatar sp-artist-2"
+                        data-artist-url="https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH?si=HcF2DWm2RGeTLvFlY1YQOg"
+                    >
+                        TW
+                    </div>
+                    <p>Deftones</p>
+                </div>
+                </div>
+                <div class="sp-artist">
+                    <div
+                        class="sp-artist-avatar sp-artist-2"
+                        data-artist-url="https://open.spotify.com/artist/2sSGPbdZJkaSE2AbcGOACx?si=FlskGrMATI-xdF_uqxZipA"
+                    >
+                        TW
+                    </div>
+                    <p>The Marías</p>
+                </div>
+                </div>
+                <div class="sp-artist">
+                    <div
+                        class="sp-artist-avatar sp-artist-2"
+                        data-artist-url="https://open.spotify.com/artist/3TJZG17pjOKXwx1ELKJPfm?si=F8As59QbRACVY4IOYBjrDQ"
+                    >
+                        TW
+                    </div>
+                    <p>Wisp</p>
+                </div>
+                </div>
+                <div class="sp-artist">
+                    <div
+                        class="sp-artist-avatar sp-artist-2"
+                        data-artist-url="https://open.spotify.com/artist/4KEHIUSoWCcqrk8AddTE1O?si=5AGp9-Q_TDCpN1Zyv6g7NQ"
+                    >
+                        TW
+                    </div>
+                    <p>Panchiko</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="sp-bottom-spacer"></div>
+
+        <button class="sp-miniplayer" id="sp-miniplayer">
+            <div class="sp-mini-cover sp-cover-1" id="sp-mini-cover">♪</div>
+            <div class="sp-mini-info">
+                <p class="sp-mini-title" id="sp-mini-title">
+                    Tus artistas favoritos
+                </p>
+                <p class="sp-mini-sub">Toca para reproducir</p>
+            </div>
+            <span class="sp-mini-play">▶</span>
+        </button>
+
+        <nav class="sp-navbar">
+            <div class="sp-nav-item active">
+                <span>⌂</span>
+                <p>Inicio</p>
+            </div>
+            <div class="sp-nav-item">
+                <span>🔍</span>
+                <p>Buscar</p>
+            </div>
+            <div class="sp-nav-item">
+                <span>📚</span>
+                <p>Tu biblioteca</p>
+            </div>
+        </nav>
+
+        <div class="sp-backdrop" id="sp-backdrop"></div>
+
+        <div class="sp-player-sheet" id="sp-player-sheet">
+            <div class="sp-sheet-handle" id="sp-sheet-close"></div>
+            <p class="sp-sheet-title" id="sp-sheet-title">
+                Tus artistas favoritos
+            </p>
+
+            <div class="sp-embed-wrap">
+                <iframe
+                    id="sp-playlist-iframe"
+                    src=""
+                    width="100%"
+                    height="352"
+                    frameborder="0"
+                    allowfullscreen=""
+                    allow="
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        fullscreen;
+                        picture-in-picture;
+                    "
+                    loading="lazy"
+                >
+                </iframe>
             </div>
 
-            <div class="sp-track">
-                <span class="sp-track-num">2</span>
-                <div class="sp-track-art"></div>
-                <div class="sp-track-info">
-                    <p class="sp-track-title">Nombre de la canción</p>
-                    <p class="sp-track-artist">Nombre de la banda</p>
-                </div>
-                <span class="sp-track-duration">2:58</span>
-            </div>
-
-            <div class="sp-track">
-                <span class="sp-track-num">3</span>
-                <div class="sp-track-art"></div>
-                <div class="sp-track-info">
-                    <p class="sp-track-title">Nombre de la canción</p>
-                    <p class="sp-track-artist">Nombre de la banda</p>
-                </div>
-                <span class="sp-track-duration">4:02</span>
-            </div>
-
-            <div class="sp-track">
-                <span class="sp-track-num">4</span>
-                <div class="sp-track-art"></div>
-                <div class="sp-track-info">
-                    <p class="sp-track-title">Nombre de la canción</p>
-                    <p class="sp-track-artist">Nombre de la banda</p>
-                </div>
-                <span class="sp-track-duration">3:11</span>
-            </div>
-
-            <div class="sp-track">
-                <span class="sp-track-num">5</span>
-                <div class="sp-track-art"></div>
-                <div class="sp-track-info">
-                    <p class="sp-track-title">Nombre de la canción</p>
-                    <p class="sp-track-artist">Nombre de la banda</p>
-                </div>
-                <span class="sp-track-duration">3:45</span>
-            </div>
-        </main>
-
-        <section class="sp-featured">
-            <p class="sp-featured-label">
+            <p class="sp-sheet-title" style="margin-top: 24px">
                 La canción con la que más te identificas
             </p>
             <div class="sp-embed-wrap">
                 <iframe
-                    src="https://open.spotify.com/embed/track/TRACK_ID_AQUI?utm_source=generator&theme=0"
+                    src="https://open.spotify.com/track/2VtXANhW6YpAzsMDQCFkAv?si=5684d8d791004679"
                     width="100%"
                     height="152"
                     frameborder="0"
@@ -102,6 +227,79 @@
                 >
                 </iframe>
             </div>
-        </section>
+        </div>
+
+        <script>
+            const playlistIds = {
+                1: 'https://open.spotify.com/playlist/4ythnvqm0AuvEcY8WgXvPH?si=f877217cadc145de',
+                2: 'PLAYLIST_ID_2',
+            }
+            const playlistNames = {
+                1: 'Tus artistas favoritos',
+                2: 'Canciones que me recuerdan a ti',
+            }
+
+            const sheet = document.getElementById('sp-player-sheet')
+            const backdrop = document.getElementById('sp-backdrop')
+            const sheetIframe = document.getElementById('sp-playlist-iframe')
+            const sheetTitle = document.getElementById('sp-sheet-title')
+            const miniTitle = document.getElementById('sp-mini-title')
+            const miniCover = document.getElementById('sp-mini-cover')
+            const miniPlayer = document.getElementById('sp-miniplayer')
+
+            let currentPlaylist = '1'
+
+            function openPlaylist(id) {
+                currentPlaylist = id
+                sheetIframe.src = `https://open.spotify.com/embed/playlist/${playlistIds[id]}?utm_source=generator&theme=0`
+                sheetTitle.textContent = playlistNames[id]
+                miniTitle.textContent = playlistNames[id]
+                miniCover.className = 'sp-mini-cover sp-cover-' + id
+                openSheet()
+            }
+
+            function openSheet() {
+                sheet.classList.add('open')
+                backdrop.classList.add('open')
+            }
+
+            function closeSheet() {
+                sheet.classList.remove('open')
+                backdrop.classList.remove('open')
+            }
+
+            document.querySelectorAll('[data-playlist]').forEach((el) => {
+                el.addEventListener('click', () =>
+                    openPlaylist(el.dataset.playlist),
+                )
+            })
+
+            miniPlayer.addEventListener('click', () =>
+                openPlaylist(currentPlaylist),
+            )
+            document
+                .getElementById('sp-sheet-close')
+                .addEventListener('click', closeSheet)
+            backdrop.addEventListener('click', closeSheet)
+
+            document
+                .querySelectorAll('.sp-artist-avatar[data-artist-url]')
+                .forEach((el) => {
+                    const artistUrl = el.dataset.artistUrl
+                    fetch(
+                        `https://open.spotify.com/oembed?url=${encodeURIComponent(artistUrl)}`,
+                    )
+                        .then((res) => res.json())
+                        .then((data) => {
+                            if (data.thumbnail_url) {
+                                el.style.backgroundImage = `url('${data.thumbnail_url}')`
+                                el.style.backgroundSize = 'cover'
+                                el.style.backgroundPosition = 'center'
+                                el.textContent = ''
+                            }
+                        })
+                        .catch(() => {})
+                })
+        </script>
     </body>
 </html>
