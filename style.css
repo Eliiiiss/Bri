@@ -282,8 +282,8 @@ body {
 /* ===== RAMO DE FLORES (imagen) ===== */
 #bouquet {
     position: absolute;
-    top: 490px;
-    right: 100px;
+    top: 400px;
+    right: 20px;
     width: 80px;
     display: block;
     cursor: pointer;
@@ -591,4 +591,41 @@ body {
     font-size: 14.5px;
     line-height: 1.7;
     color: #4a3038;
+}
+
+/* ===== RESPONSIVE / CELULAR ===== */
+
+@media (max-width: 600px) {
+    #scene {
+        width: 100%;
+        max-width: 340px;
+        height: 460px;
+    }
+
+    #envelope {
+        top: 115px;
+        width: 250px;
+        height: 170px;
+    }
+
+    #letter-card {
+        top: 115px;
+        max-width: 270px;
+    }
+
+    #bouquet {
+        top: 370px;
+        right: 5px;
+        width: 65px;
+    }
+
+    .gifts-row {
+        bottom: 5px;
+        gap: 10px;
+    }
+
+    .gift-icon {
+        width: 48px;
+        height: 48px;
+    }
 }
