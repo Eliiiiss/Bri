@@ -428,15 +428,29 @@ body {
     position: absolute;
     bottom: 10px;
     right: 12px;
-    width: 30px;
-    height: 30px;
+
+    width: 34px;
+    height: 34px;
+
     border: none;
     border-radius: 50%;
+
     background: linear-gradient(135deg, #ff9dbd, #e8628a);
+
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
+
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+
     box-shadow: 0 4px 10px rgba(220, 90, 130, 0.4);
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 .letter-greeting {
@@ -720,7 +734,6 @@ body {
     #envelope {
         top: 90px;
         left: 50%;
-
         width: 250px;
         height: 170px;
     }
@@ -731,10 +744,16 @@ body {
 
         width: calc(100% - 30px);
         max-width: 270px;
+
+        height: 250px;
     }
 
     #letter-card.show {
         transform: translate(-50%, -50%) scale(1) rotate(-1.2deg);
+    }
+
+    .letter-page {
+        padding: 28px 18px 55px 34px;
     }
 
     .letter-greeting {
@@ -743,20 +762,32 @@ body {
 
     .letter-body {
         font-size: 13.5px;
-        line-height: 24px;
+        line-height: 22px;
+    }
+
+    .page-next {
+        width: 40px;
+        height: 40px;
+
+        right: 10px;
+        bottom: 10px;
+
+        z-index: 100;
+
+        font-size: 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #bouquet {
         position: absolute;
-
         top: 345px;
         right: 5px;
-
         width: 65px;
         height: auto;
-
         display: block;
-
         z-index: 100;
     }
 
@@ -768,14 +799,10 @@ body {
 
     .gifts-row {
         position: absolute;
-
         bottom: 10px;
         left: 0;
-
         width: 100%;
-
         gap: 10px;
-
         z-index: 100;
     }
 
@@ -815,7 +842,18 @@ body {
     #letter-card {
         top: 80px;
         max-width: 250px;
-        padding: 28px 18px 25px 32px;
+        height: 240px;
+    }
+
+    .letter-page {
+        padding: 25px 16px 52px 30px;
+    }
+
+    .page-next {
+        width: 38px;
+        height: 38px;
+        right: 8px;
+        bottom: 8px;
     }
 
     #bouquet {
