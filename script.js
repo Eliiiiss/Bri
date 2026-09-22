@@ -42,19 +42,16 @@ if (homePetalsContainer) {
 // Sistema de páginas apiladas de la carta
 const letterPages = Array.from(document.querySelectorAll('.letter-page'))
 let pageOrder = letterPages
-
 function updateStack() {
     pageOrder.forEach((page, i) => {
         page.classList.remove('stack-pos-0', 'stack-pos-1', 'stack-pos-2')
         page.classList.add('stack-pos-' + i)
     })
 }
-
 document.querySelectorAll('.page-next').forEach((btn) => {
     btn.addEventListener('click', () => {
         pageOrder.push(pageOrder.shift())
         updateStack()
     })
 })
-
 updateStack()
