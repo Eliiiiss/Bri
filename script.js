@@ -55,3 +55,10 @@ document.querySelectorAll('.page-next').forEach((btn) => {
     })
 })
 updateStack()
+
+document.querySelectorAll('.page-prev').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        pageOrder.unshift(pageOrder.pop())
+        updateStack()
+    })
+})

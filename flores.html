@@ -55,6 +55,7 @@
                         siempre pensé que eras bonita pero me pudo más tu forma
                         de ser jeje.
                     </p>
+                    <button class="gs-prev" aria-label="Anterior">←</button>
                     <button class="gs-next" aria-label="Siguiente">→</button>
                 </div>
 
@@ -77,6 +78,7 @@
                         final no importa pase lo que pase se que mientras estés
                         ahí me voy a divertir.
                     </p>
+                    <button class="gs-prev" aria-label="Anterior">←</button>
                     <button class="gs-next" aria-label="Siguiente">→</button>
                 </div>
 
@@ -92,6 +94,7 @@
                         acciones demostrarán todo esto, así que por ahora es tan
                         solamente esto bri.
                     </p>
+                    <button class="gs-prev" aria-label="Anterior">←</button>
                     <button class="gs-next" aria-label="Siguiente">→</button>
                 </div>
 
@@ -138,6 +141,12 @@
                 })
             })
             updateStack()
+            document.querySelectorAll('.gs-prev').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    pageOrder.unshift(pageOrder.pop())
+                    updateStack()
+                })
+            })
         </script>
     </body>
 </html>

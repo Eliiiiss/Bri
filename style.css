@@ -453,6 +453,41 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+.page-prev {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e8628a, #ff9dbd);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(220, 90, 130, 0.4);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.page-prev:active {
+    transform: scale(0.92);
+}
+
+@media (max-width: 600px) {
+    .page-prev {
+        width: 40px;
+        height: 40px;
+        left: 10px;
+        bottom: 10px;
+        z-index: 100;
+        font-size: 18px;
+    }
+}
+
 .letter-greeting {
     font-size: 19px;
     color: #c94f78;
