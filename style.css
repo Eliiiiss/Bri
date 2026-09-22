@@ -441,13 +441,16 @@ body {
     justify-content: center;
     gap: 16px;
     width: 150px;
-    z-index: 120;
+    z-index: 1000;
+    pointer-events: none;
+    touch-action: manipulation;
 }
 
 #letter-card.show + .letter-navigation {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    isolation: isolate;
 }
 
 .page-next,
@@ -476,6 +479,11 @@ body {
         background 0.2s ease,
         box-shadow 0.2s ease;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+    z-index: 1001;
 }
 
 .page-next:hover,
@@ -767,7 +775,8 @@ body {
         position: relative;
         width: 100%;
         max-width: 340px;
-        height: 500px;
+        height: 520px;
+        isolation: isolate;
     }
 
     #envelope {
@@ -805,15 +814,9 @@ body {
     }
 
     .page-next {
-        width: 40px;
-        height: 40px;
-
-        right: 10px;
-        bottom: 10px;
-
-        z-index: 100;
-
-        font-size: 18px;
+        width: 42px;
+        height: 38px;
+        font-size: 29px;
 
         display: flex;
         align-items: center;
@@ -821,7 +824,9 @@ body {
     }
 
     .letter-navigation {
-        top: 285px;
+        top: 300px;
+        left: 50%;
+        z-index: 1000;
         width: 140px;
         gap: 14px;
     }
@@ -835,7 +840,7 @@ body {
 
     #bouquet {
         position: absolute;
-        top: 345px;
+        top: 375px;
         right: 5px;
         width: 65px;
         height: auto;
@@ -902,18 +907,17 @@ body {
     }
 
     .page-next {
-        width: 38px;
+        width: 40px;
         height: 38px;
-        right: 8px;
-        bottom: 8px;
     }
 
     .letter-navigation {
-        top: 275px;
+        top: 285px;
+        z-index: 1000;
     }
 
     #bouquet {
-        top: 330px;
+        top: 355px;
         right: 3px;
         width: 60px;
     }
