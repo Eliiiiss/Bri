@@ -58,6 +58,7 @@ body {
     z-index: 2;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
@@ -132,54 +133,56 @@ body {
     text-align: left;
 }
 
-.gs-next {
-    position: absolute;
-    bottom: 12px;
-    right: 14px;
-    width: 32px;
-    height: 32px;
-    border: none;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ff9dbd, #e8628a);
-    color: #fff;
-    font-size: 15px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(220, 90, 130, 0.4);
+.gs-navigation {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
 }
 
+.gs-next,
 .gs-prev {
-    position: absolute;
-    bottom: 10px;
-    left: 12px;
-    width: 34px;
-    height: 34px;
+    position: relative;
+    inset: auto;
+    width: 44px;
+    height: 38px;
     border: none;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #e8628a, #ff9dbd);
-    color: #fff;
-    font-size: 16px;
+    border-radius: 999px;
+    background: rgba(255, 245, 249, 0.96);
+    color: #c94f78;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    line-height: 1;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100;
-    box-shadow: 0 4px 10px rgba(220, 90, 130, 0.4);
+    padding: 0 0 4px;
+    box-shadow:
+        0 5px 14px rgba(180, 65, 105, 0.25),
+        inset 0 0 0 1px rgba(201, 79, 120, 0.16);
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
     -webkit-tap-highlight-color: transparent;
 }
 
-.gs-prev:active {
-    transform: scale(0.92);
+.gs-next:hover,
+.gs-prev:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    box-shadow:
+        0 7px 16px rgba(180, 65, 105, 0.3),
+        inset 0 0 0 1px rgba(201, 79, 120, 0.2);
 }
 
-@media (max-width: 600px) {
-    .gs-prev {
-        width: 40px;
-        height: 40px;
-        left: 10px;
-        bottom: 10px;
-        z-index: 100;
-        font-size: 18px;
-    }
+.gs-next:active,
+.gs-prev:active {
+    transform: scale(0.92);
 }
 
 .gs-sticker {
@@ -215,4 +218,24 @@ body {
     left: -14px;
     transform: rotate(18deg);
     font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    .gs-main {
+        padding: 54px 16px 24px;
+    }
+    .gs-note {
+        max-width: 320px;
+        height: min(380px, 58vh);
+        min-height: 300px;
+    }
+    .gs-navigation {
+        margin-top: 18px;
+    }
+    .gs-next,
+    .gs-prev {
+        width: 42px;
+        height: 38px;
+        font-size: 29px;
+    }
 }

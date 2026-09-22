@@ -112,10 +112,18 @@ body {
 }
 
 .sp-cover-1 {
-    background: linear-gradient(145deg, #ff9dc4, #8a4fc9 55%, #4f6fc9);
+    background-image: url('assets/spotify/playlist-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #8a4fc9;
 }
 .sp-cover-2 {
-    background: linear-gradient(145deg, #6f8fd6, #3f4f8a 55%, #1c2440);
+    background-image: url('assets/spotify/playlist-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #3f4f8a;
 }
 
 .sp-quick-item span {
